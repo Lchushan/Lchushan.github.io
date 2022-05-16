@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据库 | Liang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.cc11d504.css" as="style"><link rel="preload" href="/assets/js/app.2bb61a5f.js" as="script"><link rel="preload" href="/assets/js/2.aecd8e03.js" as="script"><link rel="preload" href="/assets/js/13.1a723e92.js" as="script"><link rel="prefetch" href="/assets/js/10.df5be70d.js"><link rel="prefetch" href="/assets/js/11.ba029b07.js"><link rel="prefetch" href="/assets/js/12.5b5fc3bc.js"><link rel="prefetch" href="/assets/js/14.1eb4f7b3.js"><link rel="prefetch" href="/assets/js/15.d69158e9.js"><link rel="prefetch" href="/assets/js/16.6eec511a.js"><link rel="prefetch" href="/assets/js/17.c76a21c6.js"><link rel="prefetch" href="/assets/js/18.22187e53.js"><link rel="prefetch" href="/assets/js/19.cd7087b3.js"><link rel="prefetch" href="/assets/js/20.e3af52e2.js"><link rel="prefetch" href="/assets/js/21.2dfb2a97.js"><link rel="prefetch" href="/assets/js/22.fc88ff85.js"><link rel="prefetch" href="/assets/js/23.6c53c466.js"><link rel="prefetch" href="/assets/js/24.0a9a5c1a.js"><link rel="prefetch" href="/assets/js/25.75c36f8b.js"><link rel="prefetch" href="/assets/js/26.a87d4ec4.js"><link rel="prefetch" href="/assets/js/27.d09b87df.js"><link rel="prefetch" href="/assets/js/28.96ea221d.js"><link rel="prefetch" href="/assets/js/29.53ad3bdc.js"><link rel="prefetch" href="/assets/js/3.1bd1ec9c.js"><link rel="prefetch" href="/assets/js/30.c610705e.js"><link rel="prefetch" href="/assets/js/31.9e5b6883.js"><link rel="prefetch" href="/assets/js/32.9508751b.js"><link rel="prefetch" href="/assets/js/33.4bb48fd7.js"><link rel="prefetch" href="/assets/js/34.0c902ccb.js"><link rel="prefetch" href="/assets/js/35.a9491df0.js"><link rel="prefetch" href="/assets/js/36.dd49cf66.js"><link rel="prefetch" href="/assets/js/37.6fd9ada8.js"><link rel="prefetch" href="/assets/js/38.81ccfe44.js"><link rel="prefetch" href="/assets/js/39.4b26ce80.js"><link rel="prefetch" href="/assets/js/4.ac47e96f.js"><link rel="prefetch" href="/assets/js/40.c2c54f90.js"><link rel="prefetch" href="/assets/js/41.d1f33fd4.js"><link rel="prefetch" href="/assets/js/42.a6eaa761.js"><link rel="prefetch" href="/assets/js/43.de7b020e.js"><link rel="prefetch" href="/assets/js/44.ea3b5f4c.js"><link rel="prefetch" href="/assets/js/45.9bd80565.js"><link rel="prefetch" href="/assets/js/46.68c9c78c.js"><link rel="prefetch" href="/assets/js/47.977948ec.js"><link rel="prefetch" href="/assets/js/48.991512ba.js"><link rel="prefetch" href="/assets/js/49.069a351c.js"><link rel="prefetch" href="/assets/js/5.4655c11a.js"><link rel="prefetch" href="/assets/js/50.d00d5f28.js"><link rel="prefetch" href="/assets/js/51.3151b5bb.js"><link rel="prefetch" href="/assets/js/52.866911b7.js"><link rel="prefetch" href="/assets/js/53.b6f60fa8.js"><link rel="prefetch" href="/assets/js/54.a89d781d.js"><link rel="prefetch" href="/assets/js/55.b312e1a9.js"><link rel="prefetch" href="/assets/js/56.ba600556.js"><link rel="prefetch" href="/assets/js/57.20109eff.js"><link rel="prefetch" href="/assets/js/58.48cc2935.js"><link rel="prefetch" href="/assets/js/59.9ba501e0.js"><link rel="prefetch" href="/assets/js/6.3755e0c7.js"><link rel="prefetch" href="/assets/js/60.f922157e.js"><link rel="prefetch" href="/assets/js/61.00550a8d.js"><link rel="prefetch" href="/assets/js/62.14f967dd.js"><link rel="prefetch" href="/assets/js/63.0e00a96e.js"><link rel="prefetch" href="/assets/js/64.a24776a9.js"><link rel="prefetch" href="/assets/js/7.a66855d0.js"><link rel="prefetch" href="/assets/js/8.b20260b7.js"><link rel="prefetch" href="/assets/js/9.04c019be.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cc11d504.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Liang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vuepress
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/插件小技巧/" class="nav-link">
+  插件小技巧
+</a></li><li class="dropdown-item"><!----> <a href="/前端基础/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/js相关知识/" class="nav-link">
+  js相关知识
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  vue问题
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  react问题
+</a></li><li class="dropdown-item"><!----> <a href="/优化问题/" class="nav-link">
+  优化问题
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link router-link-active">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/regular&amp;git/regular/" class="nav-link">
+  正则&amp;git
+</a></li></ul></div></div><div class="nav-item"><a href="/算法题库/" class="nav-link">
+  算法题库
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/progress/" class="nav-link">
+  记录问题
+</a></li><li class="dropdown-item"><!----> <a href="/小案例/" class="nav-link">
+  小案例
+</a></li><li class="dropdown-item"><!----> <a href="/模块联邦/" class="nav-link">
+  模块联邦
+</a></li></ul></div></div><div class="nav-item"><a href="https://gitee.com/Lchu3/lchushan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vuepress
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/插件小技巧/" class="nav-link">
+  插件小技巧
+</a></li><li class="dropdown-item"><!----> <a href="/前端基础/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/js相关知识/" class="nav-link">
+  js相关知识
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  vue问题
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  react问题
+</a></li><li class="dropdown-item"><!----> <a href="/优化问题/" class="nav-link">
+  优化问题
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link router-link-active">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/regular&amp;git/regular/" class="nav-link">
+  正则&amp;git
+</a></li></ul></div></div><div class="nav-item"><a href="/算法题库/" class="nav-link">
+  算法题库
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/progress/" class="nav-link">
+  记录问题
+</a></li><li class="dropdown-item"><!----> <a href="/小案例/" class="nav-link">
+  小案例
+</a></li><li class="dropdown-item"><!----> <a href="/模块联邦/" class="nav-link">
+  模块联邦
+</a></li></ul></div></div><div class="nav-item"><a href="https://gitee.com/Lchu3/lchushan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>node.js</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/node/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/node/express.html" class="sidebar-link">express</a></li><li><a href="/node/database.html" aria-current="page" class="active sidebar-link">数据库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/database.html#常用sql语句" class="sidebar-link">常用SQL语句</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/database.html#几种常用函数" class="sidebar-link">几种常用函数</a></li></ul></li><li class="sidebar-sub-header"><a href="/node/database.html#使用node操作数据库" class="sidebar-link">使用node操作数据库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/database.html#前端与后台" class="sidebar-link">前端与后台</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数据库"><a href="#数据库" class="header-anchor">#</a> 数据库</h1> <h3 id="数据库介绍"><a href="#数据库介绍" class="header-anchor">#</a> 数据库介绍</h3> <p>数据库就是数据的仓库，用来按照特定的结构去组织和管理我们的数据，有了数据库我们就可以更加方便、便捷的操作（C / R / U / D）我们需要保存的数据。</p> <h3 id="基本概念"><a href="#基本概念" class="header-anchor">#</a> 基本概念</h3> <ul><li><p>数据库 存储数据的仓库或是软件</p></li> <li><p>表</p></li> <li><p>字段 —— 指的就是列</p></li> <li><p>字段类型 —— 指的就是列能够存储的数据种类</p></li> <li><ul><li>int</li> <li>char()</li> <li><code>varchar()</code></li> <li>date</li> <li>decimal</li></ul></li> <li><p>数据库查询：指的是操作数据库的过程（查、增、删、改）</p></li> <li><p>数据库查询语言：<code>SQL</code>(Structured Query     Language)结构化查询语言.</p></li> <li><p>主键：是用来标识数据表中每一行数据的唯一性的，确保独一无二性</p></li></ul> <h3 id="基本操作"><a href="#基本操作" class="header-anchor">#</a> 基本操作</h3> <p><strong>数据库管理工具</strong></p> <p>数据库管理工具本质上就是一个使用数据库服务器软件（Server）提供的服务的数据库客户端（Client）</p> <p>命令行工具(了解)</p> <p>一般如果只是简单操作数据库，可以使用 <code>MySQL</code> 内置的命令行工具完成：</p> <p>进入 <code>MySQL</code> 客户端的 <code>REPL</code> 环境过后，可以通过标准的 <code>SQL</code> 语句操作数据库。</p> <p>常见的操作指令：</p> <div class="language- extra-class"><pre class="language-text"><code>mysql&gt; show databases;  -- 显示全部数据库
+mysql&gt; create database &lt;db-name&gt;;  -- 创建一个指定名称的数据库
+mysql&gt; use &lt;db-name&gt;;  -- 使用一个数据库，相当于进入指定的数据库
+mysql&gt; show tables;  -- 显示当前数据库中有哪些表
+mysql&gt; create table &lt;table-name&gt; (id int, name varchar(20), age int);  -- 创建一个指定名称的数据表，并添加 3 个列
+mysql&gt; desc &lt;table-name&gt;;  -- 查看指定表结构
+mysql&gt; source ./path/to/sql-file.sql  -- 执行本地 SQL 文件中的 SQL 语句
+mysql&gt; drop table &lt;table-name&gt;;  -- 删除一个指定名称的数据表
+mysql&gt; drop database &lt;db-name&gt;;  -- 删除一个指定名称的数据库
+mysql&gt; exit|quit;  -- 退出数据库终端
+</code></pre></div><h2 id="常用sql语句"><a href="#常用sql语句" class="header-anchor">#</a> 常用<code>SQL</code>语句</h2> <p><strong>查询</strong></p> <div class="language- extra-class"><pre class="language-text"><code>-- 1. 查询的SQL语句  查询出来的数据都是结果集
+-- 语法:  select * from 表名 where 条件 
+select * from  stuInfo;  --  表示查询所有的数据信息
+select id,name,gender from stuinfo; -- 根据指定的字段来查询
+select * from stuinfo where id = 2;  -- 查询id为2的那一条数据
+select name,age from stuinfo where id = 3;  -- 查询id为3的那条数据中的name age id
+select * from stuinfo where id =3 or id= 5; -- 查询id为3 和5 的那两条数据
+select * from stuinfo where id = 2 or id = 3 or id = 4;
+select * from stuinfo where id in (2,3,4,5,7);  -- 查询id为 2  3  4  5  7 的那些数据
+</code></pre></div><p><strong>增加</strong></p> <div class="language- extra-class"><pre class="language-text"><code>-- 2. 增加语句
+-- 语法: insert [into] 表名 (字段1,字段2...) values (值1,值2...);
+insert into stuinfo (id,name,gender,age,phone) values (NULL,'张三','男',20,'1302012345');
+insert into stuinfo (name,age,gender) values ('李四',21,'男');
+insert into stuinfo values (null,&quot;王五&quot;,&quot;男&quot;,21);  -- 如果直接写值的话,必须和字段匹配起来,这样写会报错的
+insert into stuinfo values (null,&quot;王五&quot;,&quot;男&quot;,21,&quot;1234666&quot;); -- 没有字段的时候,如果要是直接添加值的话,必须和字段对应,不能缺少
+</code></pre></div><p><strong>删除</strong></p> <div class="language- extra-class"><pre class="language-text"><code>-- 3. 删除语句
+-- 语法: DELETE FROM 表名 where 条件  
+DELETE FROM stuinfo where id = 7;
+DELETE FROM stuinfo where id = 2 or id = 8;
+DELETE FROM stuinfo where id in (4,5,10);
+DELETE FROM stuinfo WHERE gender ='男' AND age = 20;  -- 通过多条件来删除数据  and 在这里表示并且的关系 
+DELETE FROM stuinfo WHERE id &gt; 10;   -- 还可以根据id的特性
+</code></pre></div><p><strong>修改</strong></p> <div class="language- extra-class"><pre class="language-text"><code>-- 4. 修改语句
+-- 语法: UPDATE 表名 set 字段1= 值1,字段2 = 值2... where 条件 
+UPDATE stuinfo set gender = '男';  -- 如果后面没有跟条件的话,则表示将表中所有的数据中的gender都改成了男
+UPDATE stuinfo set gender = '女' WHERE id = 3; --  将id为3的那条数据中的gender修改为“女”
+UPDATE stuinfo set gender = '女' WHERE age = 21 and name = '李四'; -- 将数据表中名字叫&quot;李四&quot;
+</code></pre></div><h3 id="几种常用函数"><a href="#几种常用函数" class="header-anchor">#</a> 几种常用函数</h3> <p><strong>count,MAX,MIN,avg</strong></p> <div class="language- extra-class"><pre class="language-text"><code>SELECT count(*) FROM stuinfo; -- count用来统计所有的数据条数 会根据里面的参数来进行统计
+SELECT count(id) FROM stuinfo; -- 根据id来统计具体的数据条数
+SELECT count(phone) FROM stuinfo; -- 根据phone字段来统计具体的条数,如果数据为空则会忽略
+SELECT MAX(age) FROM stuinfo;        -- 查询年龄中的最大值
+SELECT MIN(age) FROM stuinfo;  -- 查询年龄中的最小值
+SELECT avg(age) FROM stuinfo;  -- 查询年龄中的平均值 average 平均值
+</code></pre></div><p><strong>order by</strong></p> <div class="language- extra-class"><pre class="language-text"><code>SELECT * FROM stuinfo order by id;  -- order by是用来排序的,默认是以升序进行排序 asc就是升序排序
+SELECT * FROM stuinfo ORDER BY id desc; 
+SELECT * FROM stuinfo ORDER BY age desc;  -- desc是降序排列
+</code></pre></div><p><strong>limit</strong></p> <div class="language- extra-class"><pre class="language-text"><code>SELECT * FROM stuinfo ORDER BY id;
+select * from stuinfo limit 3;  -- 取结果集中的前3条
+SELECT * FROM stuinfo  ORDER BY id limit 3;
+
+-- limit  n (索引) m (数量)   数据表中数据的索引默认也是从0开始的,索引只会对剩下的数据进行排序
+SELECT * FROM stuinfo ORDER BY id LIMIT 3, 3;
+
+-- 还可以这样来实现一个分页  limit count(数量)  offset index(索引);
+SELECT * FROM stuinfo ORDER BY id limit 3 offset 0; -- 从索引为0的位置向下查询3条
+SELECT * FROM stuinfo ORDER BY id limit 3 offset 3; -- 从索引为3的位置向下查询3条
+SELECT * FROM stuinfo ORDER BY id limit 3 offset 6; -- 从索引为6的位置向下查询3条
+
+-- 经过上面的规律可以总结如下:
+int pageCount = 3 ; -- 每页显示的条数
+int  pageSize = 1 ; -- 当前的页码  1 第1页  2 第2页 3 第3页
+
+ SELECT * FROM stuinfo ORDER BY id LIMIT pageCount offset (pageSize - 1)* pageCount;
+</code></pre></div><h2 id="使用node操作数据库"><a href="#使用node操作数据库" class="header-anchor">#</a> 使用node操作数据库</h2> <h5 id="安装mysql模块"><a href="#安装mysql模块" class="header-anchor">#</a> 安装<code>mysql</code>模块</h5> <div class="language-js extra-class"><pre class="language-js"><code>npm install mysql <span class="token operator">-</span><span class="token constant">S</span>
+</code></pre></div><h5 id="连接数据库"><a href="#连接数据库" class="header-anchor">#</a> 连接数据库</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 导入MySQL模块</span>
+<span class="token keyword">var</span> mysql <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mysql'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 创建一个数据库连接</span>
+<span class="token keyword">var</span> connection <span class="token operator">=</span> mysql<span class="token punctuation">.</span><span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    host<span class="token operator">:</span>       <span class="token string">'127.0.0.1'</span>  <span class="token comment">// 数据库服务器的地址</span>
+    user<span class="token operator">:</span>       <span class="token string">'root'</span><span class="token punctuation">,</span>         <span class="token comment">// 数据库的账号 </span>
+    password<span class="token operator">:</span>   <span class="token string">'root'</span><span class="token punctuation">,</span>         <span class="token comment">// 数据库的密码</span>
+    database<span class="token operator">:</span>   <span class="token string">'itheima'</span>     <span class="token comment">// 数据库名称</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 连接数据库或打开数据库</span>
+connection<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="查询基本操作"><a href="#查询基本操作" class="header-anchor">#</a> 查询基本操作</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> sqlStr <span class="token operator">=</span> <span class="token string">'select * from heros'</span><span class="token punctuation">;</span>
+connection<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>sqlStr<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results<span class="token punctuation">,</span> fields</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="在查询语句中使用参数"><a href="#在查询语句中使用参数" class="header-anchor">#</a> 在查询语句中使用参数</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 获取客户端传递过来的查询参数</span>
+<span class="token keyword">var</span> id <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'小红'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 拼接查询参数</span>
+connection<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token string">'select * from heros where id=&quot;'</span> <span class="token operator">+</span> id <span class="token operator">+</span> <span class="token string">'&quot; and name=&quot;'</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">'&quot;'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results<span class="token punctuation">,</span> fields</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="使用参数化查询语句"><a href="#使用参数化查询语句" class="header-anchor">#</a> 使用参数化查询语句</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 通过问号的形式拼接查询参数，问号相当于占位符，将来，传递的真实的数据会替换掉问号所在的区域</span>
+<span class="token comment">// 真实参数列表可以通过数组的形式进行传递，问号占位符所代表的参数顺序，就是实际数组中每一项的作用</span>
+<span class="token keyword">const</span> sqlStr <span class="token operator">=</span> <span class="token string">'select count(*) from heros where id=? and name=?'</span><span class="token punctuation">;</span>
+connection<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>sqlStr<span class="token punctuation">,</span> <span class="token punctuation">[</span>id<span class="token punctuation">,</span> name<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results<span class="token punctuation">,</span> fields</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'count(*)'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="添加数据"><a href="#添加数据" class="header-anchor">#</a> 添加数据</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 插入数据</span>
+<span class="token keyword">var</span> sqlStr <span class="token operator">=</span> <span class="token string">'insert into heros (name, gender, avatar) values (?, ?, ?)'</span><span class="token punctuation">;</span>
+connection<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>sqlStr<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'小小'</span><span class="token punctuation">,</span> <span class="token string">'女'</span><span class="token punctuation">,</span> <span class="token string">'img/119.jpg'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results<span class="token punctuation">,</span> fields</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="便捷的插入数据"><a href="#便捷的插入数据" class="header-anchor">#</a> 便捷的插入数据</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> user <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'尼古拉斯凯奇'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span> gender<span class="token operator">:</span> <span class="token string">'男'</span><span class="token punctuation">,</span> address<span class="token operator">:</span> <span class="token string">'美国'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+connection<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token string">'insert into users set ?'</span><span class="token punctuation">,</span>user <span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> result<span class="token punctuation">,</span> fields</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="更新数据"><a href="#更新数据" class="header-anchor">#</a> 更新数据</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> sqlStr <span class="token operator">=</span> <span class="token string">'update heros set name=?, gender=? where id=?'</span><span class="token punctuation">;</span>
+connection<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>sqlStr<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'武松'</span><span class="token punctuation">,</span> <span class="token string">'男'</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results<span class="token punctuation">,</span> fields</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="便捷的更新数据"><a href="#便捷的更新数据" class="header-anchor">#</a> 便捷的更新数据</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+    id<span class="token operator">:</span><span class="token number">6</span><span class="token punctuation">,</span>
+    age<span class="token operator">:</span><span class="token number">9</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span><span class="token string">'OK'</span>
+<span class="token punctuation">}</span>
+connection<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token string">'update users_copy set ? where id=?'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>user<span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="删除数据"><a href="#删除数据" class="header-anchor">#</a> 删除数据</h5> <p>硬删除</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 数据硬删除，执行成功之后，匹配到的数据记录，将会从表中删除</span>
+connection<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token string">'delete from heros where id=12'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results<span class="token punctuation">,</span> fields</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>软删除</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 数据软删除，通过给表添加isdel字段，来标识数据记录是否被删除，true表示被删除，false表示未删除</span>
+<span class="token comment">// 数据软删除的好处：能最大限度地保留数据的原始性</span>
+connection<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token string">'update heros set isdel=? where id=?'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results<span class="token punctuation">,</span> fields</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="前端与后台"><a href="#前端与后台" class="header-anchor">#</a> 前端与后台</h3> <p><img src="/assets/img/node11.bc2ca0f1.png" alt="node11.png"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/node/express.html" class="prev">
+        express
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2bb61a5f.js" defer></script><script src="/assets/js/2.aecd8e03.js" defer></script><script src="/assets/js/13.1a723e92.js" defer></script>
+  </body>
+</html>

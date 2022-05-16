@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>express | Liang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.cc11d504.css" as="style"><link rel="preload" href="/assets/js/app.2bb61a5f.js" as="script"><link rel="preload" href="/assets/js/2.aecd8e03.js" as="script"><link rel="preload" href="/assets/js/32.9508751b.js" as="script"><link rel="prefetch" href="/assets/js/10.df5be70d.js"><link rel="prefetch" href="/assets/js/11.ba029b07.js"><link rel="prefetch" href="/assets/js/12.5b5fc3bc.js"><link rel="prefetch" href="/assets/js/13.1a723e92.js"><link rel="prefetch" href="/assets/js/14.1eb4f7b3.js"><link rel="prefetch" href="/assets/js/15.d69158e9.js"><link rel="prefetch" href="/assets/js/16.6eec511a.js"><link rel="prefetch" href="/assets/js/17.c76a21c6.js"><link rel="prefetch" href="/assets/js/18.22187e53.js"><link rel="prefetch" href="/assets/js/19.cd7087b3.js"><link rel="prefetch" href="/assets/js/20.e3af52e2.js"><link rel="prefetch" href="/assets/js/21.2dfb2a97.js"><link rel="prefetch" href="/assets/js/22.fc88ff85.js"><link rel="prefetch" href="/assets/js/23.6c53c466.js"><link rel="prefetch" href="/assets/js/24.0a9a5c1a.js"><link rel="prefetch" href="/assets/js/25.75c36f8b.js"><link rel="prefetch" href="/assets/js/26.a87d4ec4.js"><link rel="prefetch" href="/assets/js/27.d09b87df.js"><link rel="prefetch" href="/assets/js/28.96ea221d.js"><link rel="prefetch" href="/assets/js/29.53ad3bdc.js"><link rel="prefetch" href="/assets/js/3.1bd1ec9c.js"><link rel="prefetch" href="/assets/js/30.c610705e.js"><link rel="prefetch" href="/assets/js/31.9e5b6883.js"><link rel="prefetch" href="/assets/js/33.4bb48fd7.js"><link rel="prefetch" href="/assets/js/34.0c902ccb.js"><link rel="prefetch" href="/assets/js/35.a9491df0.js"><link rel="prefetch" href="/assets/js/36.dd49cf66.js"><link rel="prefetch" href="/assets/js/37.6fd9ada8.js"><link rel="prefetch" href="/assets/js/38.81ccfe44.js"><link rel="prefetch" href="/assets/js/39.4b26ce80.js"><link rel="prefetch" href="/assets/js/4.ac47e96f.js"><link rel="prefetch" href="/assets/js/40.c2c54f90.js"><link rel="prefetch" href="/assets/js/41.d1f33fd4.js"><link rel="prefetch" href="/assets/js/42.a6eaa761.js"><link rel="prefetch" href="/assets/js/43.de7b020e.js"><link rel="prefetch" href="/assets/js/44.ea3b5f4c.js"><link rel="prefetch" href="/assets/js/45.9bd80565.js"><link rel="prefetch" href="/assets/js/46.68c9c78c.js"><link rel="prefetch" href="/assets/js/47.977948ec.js"><link rel="prefetch" href="/assets/js/48.991512ba.js"><link rel="prefetch" href="/assets/js/49.069a351c.js"><link rel="prefetch" href="/assets/js/5.4655c11a.js"><link rel="prefetch" href="/assets/js/50.d00d5f28.js"><link rel="prefetch" href="/assets/js/51.3151b5bb.js"><link rel="prefetch" href="/assets/js/52.866911b7.js"><link rel="prefetch" href="/assets/js/53.b6f60fa8.js"><link rel="prefetch" href="/assets/js/54.a89d781d.js"><link rel="prefetch" href="/assets/js/55.b312e1a9.js"><link rel="prefetch" href="/assets/js/56.ba600556.js"><link rel="prefetch" href="/assets/js/57.20109eff.js"><link rel="prefetch" href="/assets/js/58.48cc2935.js"><link rel="prefetch" href="/assets/js/59.9ba501e0.js"><link rel="prefetch" href="/assets/js/6.3755e0c7.js"><link rel="prefetch" href="/assets/js/60.f922157e.js"><link rel="prefetch" href="/assets/js/61.00550a8d.js"><link rel="prefetch" href="/assets/js/62.14f967dd.js"><link rel="prefetch" href="/assets/js/63.0e00a96e.js"><link rel="prefetch" href="/assets/js/64.a24776a9.js"><link rel="prefetch" href="/assets/js/7.a66855d0.js"><link rel="prefetch" href="/assets/js/8.b20260b7.js"><link rel="prefetch" href="/assets/js/9.04c019be.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cc11d504.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Liang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vuepress
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/插件小技巧/" class="nav-link">
+  插件小技巧
+</a></li><li class="dropdown-item"><!----> <a href="/前端基础/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/js相关知识/" class="nav-link">
+  js相关知识
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  vue问题
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  react问题
+</a></li><li class="dropdown-item"><!----> <a href="/优化问题/" class="nav-link">
+  优化问题
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link router-link-active">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/regular&amp;git/regular/" class="nav-link">
+  正则&amp;git
+</a></li></ul></div></div><div class="nav-item"><a href="/算法题库/" class="nav-link">
+  算法题库
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/progress/" class="nav-link">
+  记录问题
+</a></li><li class="dropdown-item"><!----> <a href="/小案例/" class="nav-link">
+  小案例
+</a></li><li class="dropdown-item"><!----> <a href="/模块联邦/" class="nav-link">
+  模块联邦
+</a></li></ul></div></div><div class="nav-item"><a href="https://gitee.com/Lchu3/lchushan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vuepress
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/插件小技巧/" class="nav-link">
+  插件小技巧
+</a></li><li class="dropdown-item"><!----> <a href="/前端基础/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/js相关知识/" class="nav-link">
+  js相关知识
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  vue问题
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  react问题
+</a></li><li class="dropdown-item"><!----> <a href="/优化问题/" class="nav-link">
+  优化问题
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link router-link-active">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/regular&amp;git/regular/" class="nav-link">
+  正则&amp;git
+</a></li></ul></div></div><div class="nav-item"><a href="/算法题库/" class="nav-link">
+  算法题库
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/progress/" class="nav-link">
+  记录问题
+</a></li><li class="dropdown-item"><!----> <a href="/小案例/" class="nav-link">
+  小案例
+</a></li><li class="dropdown-item"><!----> <a href="/模块联邦/" class="nav-link">
+  模块联邦
+</a></li></ul></div></div><div class="nav-item"><a href="https://gitee.com/Lchu3/lchushan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>node.js</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/node/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/node/express.html" aria-current="page" class="active sidebar-link">express</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/express.html#express的介绍" class="sidebar-link">express的介绍：</a></li><li class="sidebar-sub-header"><a href="/node/express.html#express的使用" class="sidebar-link">express的使用：</a></li><li class="sidebar-sub-header"><a href="/node/express.html#接收get和post的不同的请求" class="sidebar-link">接收get和post的不同的请求</a></li><li class="sidebar-sub-header"><a href="/node/express.html#ejs模板引擎介绍" class="sidebar-link">EJS模板引擎介绍</a></li><li class="sidebar-sub-header"><a href="/node/express.html#express-static托管静态页面" class="sidebar-link">express.static托管静态页面</a></li><li class="sidebar-sub-header"><a href="/node/express.html#使用include引入公共部分" class="sidebar-link">使用include引入公共部分</a></li><li class="sidebar-sub-header"><a href="/node/express.html#express-router创建路由" class="sidebar-link">express.Router创建路由</a></li></ul></li><li><a href="/node/database.html" class="sidebar-link">数据库</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="express"><a href="#express" class="header-anchor">#</a> express</h1> <h2 id="express的介绍"><a href="#express的介绍" class="header-anchor">#</a> express的介绍：</h2> <p>基于node.js平台，快速、开放、极简的Web开发框架。</p> <p>express的框架核心特性：</p> <ol><li>可以设置中间件来响应HTTP请求。</li> <li>定义了路由表用于执行不同的HTTP请求动作。</li> <li>可以通过向模板传递参数来动态渲染HTML页面。</li></ol> <h2 id="express的使用"><a href="#express的使用" class="header-anchor">#</a> express的使用：</h2> <p>安装：</p> <div class="language-js extra-class"><pre class="language-js"><code>npm install express <span class="token operator">-</span><span class="token constant">S</span><span class="token punctuation">;</span>     <span class="token comment">//先安装express框架</span>
+</code></pre></div><p>使用：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 1. 引入框架模块</span>
+<span class="token keyword">var</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 2. 创建服务器</span>
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3. 开启服务器并监听端口</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'express server is running at http://127.0.0.1:3000'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 4.给app对象注册中间件,监听请求</span>
+<span class="token comment">// use是一个中间件,可以用来监听get和post请求</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// res.end('hello world') // 返回英文数据</span>
+    <span class="token comment">// res.writeHeader(200,{</span>
+    <span class="token comment">//   'Content-Type':'text/plan;charset=utf-8'</span>
+    <span class="token comment">// })</span>
+    <span class="token comment">// res.end('express框架的基本使用...');// 直接返回带有中文的内容会有乱码 加响应头后可以解决</span>
+
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'express框架的基本使用...'</span><span class="token punctuation">)</span> <span class="token punctuation">;</span><span class="token comment">// 可以直接返回中文并解析不会出现乱码</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="接收get和post的不同的请求"><a href="#接收get和post的不同的请求" class="header-anchor">#</a> 接收get和post的不同的请求</h2> <p>使用：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 1. 引入框架模块</span>
+<span class="token keyword">var</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 2. 创建服务器</span>
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3. 开启服务器并监听端口</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'express server is running at http://127.0.0.1:3000'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 4.给app对象注册中间件,监听请求</span>
+<span class="token comment">// use是一个中间件,可以用来监听get和post请求</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'这是一个index的主页面...'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/movie'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'这是一个电影的主页面...'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'这是一个登陆的主页面...'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="ejs模板引擎介绍"><a href="#ejs模板引擎介绍" class="header-anchor">#</a> EJS模板引擎介绍</h2> <p>express框架中推荐使用的页面模板引擎是ejs，而不是art-template</p> <p>使用步骤：</p> <ol><li>使用命令 npm i ejs -S 安装这个模板引擎</li> <li>给express框架设置默认的模板引擎</li> <li>设置模板引擎文件的默认路径</li></ol> <p>使用：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 1. 引入模块</span>
+<span class="token keyword">var</span> express <span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 2. 创建服务器对象</span>
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// 通过app.set方法，设置express的默认模板引擎为ejs</span>
+<span class="token comment">// 第一个参数是'view engine' 是固定的写法,表示我们要设置默认的模板引擎</span>
+app<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'view engine'</span><span class="token punctuation">,</span><span class="token string">'ejs'</span><span class="token punctuation">)</span>
+<span class="token comment">// 通过app.set('views',path)来设置默认模板页面的存放路径;</span>
+<span class="token comment">// 第一个参数'views'是固定写法</span>
+<span class="token comment">// 注意,在express中,已经默认约定好了,如果用户不设置app.set('views',path), </span>
+<span class="token comment">// 那么,默认的模板 文件存放路径就是'./views',就是当前根目录下面的views文件夹,约定大于配置</span>
+app<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'views'</span><span class="token punctuation">,</span><span class="token string">'./views'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 3. 启动服务器并监听端口</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'express server is running at http://127.0.0.1:3000'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 4. 给app对象注册中间件,并监听请求</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 注意:ejs模板引擎,默认的模板文件名后缀名不是.html,而是ejs</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'index.ejs'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/movie'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'movie.ejs'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="express-static托管静态页面"><a href="#express-static托管静态页面" class="header-anchor">#</a> express.static托管静态页面</h2> <p>利用Express内置的express.static可以方便地托管静态文件,例如图片、CSS、JavaScript文件等。</p> <p>将静态资源 文件所在的目录作为参数传递给express.static中间件就可以提供静态资源文件的访问了.</p> <p>例如,假设在public目录放置了图片、CSS和JavaScript文件,你就可以:</p> <div class="language-js extra-class"><pre class="language-js"><code>app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span><span class="token string">'public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>现在public目录下面的文件就可以访问了。</p> <div class="language- extra-class"><pre class="language-text"><code>http://localhost:3000/images/kitten.jpg
+http://localhost:3000/css/style.css
+http://localhost:3000/js/app.js
+http://localhost:3000/images/bg.png
+http://localhost:3000/images/hello.html
+//所有文件的路径都是相对于存储目录的,因此存放静态文件的目录名不会出现在URL中.
+</code></pre></div><p>如果你希望所有通过express.static访问的文件都存放在一个&quot;虚拟(virtual)&quot;目录(即目录根本不存在)下面,可以通过为静态资源目录指定一个挂载路径的方式来实现,如下所示:</p> <div class="language-js extra-class"><pre class="language-js"><code>app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/static'</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span><span class="token string">'public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>现在，你就可以通过带有“/static&quot;前缀的地址来访问public目录下面的文件了.</p> <div class="language- extra-class"><pre class="language-text"><code>http://localhost:3000/static/images/kitten.jpg
+http://localhost:3000/static/css/style.css
+http://localhost:3000/static/js/app.js
+http://localhost:3000/static/images/bg.png
+http://localhost:3000/static/images/hello.html
+</code></pre></div><h2 id="使用include引入公共部分"><a href="#使用include引入公共部分" class="header-anchor">#</a> 使用include引入公共部分</h2> <p>使用ejs模板引擎中的include()方法来引入即可. &lt;%- %&gt;表示不转义输出.</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;%- include('./layout/header.ejs')%&gt;
+    &lt;h2&gt;这是一个主页面的内容&lt;/h2&gt;
+    &lt;p&gt;姓名:&lt;%= name%&gt;&lt;/p&gt;
+    &lt;p&gt;性别:&lt;%= gender%&gt;&lt;/p&gt;
+    &lt;p&gt;年龄:&lt;%= age%&gt;&lt;/p&gt;
+    &lt;p&gt;爱好:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;% hobby.forEach(item=&gt;{ %&gt;
+            &lt;li&gt;&lt;%= item%&gt;&lt;/li&gt;
+        &lt;%})%&gt;
+    &lt;/ul&gt;
+    &lt;img src=&quot;/a/b/public/images/psb.jpg&quot; alt=&quot;&quot;&gt;
+&lt;%- include('./layout/footer.ejs')%&gt;
+</code></pre></div><h2 id="express-router创建路由"><a href="#express-router创建路由" class="header-anchor">#</a> express.Router创建路由</h2> <p><strong>app.route()</strong></p> <p>可以使用app.router()创建路由路径的链式路由句柄.由于路径在一个地方指定,这样做有助于创建模块化的路由.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> router <span class="token operator">=</span> express<span class="token punctuation">.</span><span class="token function">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/add'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'add'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/info'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'info'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/edit'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'edit'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/detail'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'这是post请求发送的数据'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> router<span class="token punctuation">;</span>
+</code></pre></div><p><strong>express.Router</strong></p> <p>可使用express.Router类创建模块化、可挂载的路由句柄。Router实例是一个完整的中间件和路由系统，因此常称其为一个&quot;mini-app&quot;。</p> <p>在项目目录下创建名为router.js的文件，内容如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 1. 导入模块</span>
+<span class="token keyword">var</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 2. 创建一个路由模块</span>
+<span class="token keyword">var</span> router <span class="token operator">=</span> express<span class="token punctuation">.</span><span class="token function">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 将请求路径挂载到router路由对象上</span>
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// res.send('这是主页面的内容...')</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'tom'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span> gender<span class="token operator">:</span> <span class="token string">'男'</span><span class="token punctuation">,</span> hobby<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'吃饭'</span><span class="token punctuation">,</span> <span class="token string">'睡觉'</span><span class="token punctuation">,</span> <span class="token string">'打豆豆'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/movie'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// res.send('这是一个电影页面的内容啊...')</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'movie'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// res.send('这是一个用户登陆的请求啊......')</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'login'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+router<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'这是一个post请求啊...'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 将创建的router暴露出去</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> router
+</code></pre></div><p>在app.js中的内容如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 1. 引入模块</span>
+<span class="token keyword">var</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> ejs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'ejs'</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> router <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./route.js'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 2. 创建服务器对象</span>
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3. 启动服务,并监听端口</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'express server is running at http://127.0.0.1:3000'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'view engine'</span><span class="token punctuation">,</span><span class="token string">'ejs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'views'</span><span class="token punctuation">,</span><span class="token string">'./views'</span><span class="token punctuation">)</span>
+ejs<span class="token punctuation">.</span>delimiter <span class="token operator">=</span> <span class="token string">'?'</span><span class="token punctuation">;</span>
+<span class="token comment">// 实现静态资源的托管 </span>
+<span class="token comment">// app.use(express.static('public'))</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/a/b/public'</span><span class="token punctuation">,</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span><span class="token string">'public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">;</span><span class="token comment">// 可以放在任何虚拟目录里面,而不会受到影响</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/c/d/assets'</span><span class="token punctuation">,</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span><span class="token string">'assets'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 4. 注册路由模块</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>router<span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/node/" class="prev router-link-active">
+        介绍
+      </a></span> <span class="next"><a href="/node/database.html">
+        数据库
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2bb61a5f.js" defer></script><script src="/assets/js/2.aecd8e03.js" defer></script><script src="/assets/js/32.9508751b.js" defer></script>
+  </body>
+</html>

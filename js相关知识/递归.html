@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>递归 | Liang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.cc11d504.css" as="style"><link rel="preload" href="/assets/js/app.2bb61a5f.js" as="script"><link rel="preload" href="/assets/js/2.aecd8e03.js" as="script"><link rel="preload" href="/assets/js/6.3755e0c7.js" as="script"><link rel="prefetch" href="/assets/js/10.df5be70d.js"><link rel="prefetch" href="/assets/js/11.ba029b07.js"><link rel="prefetch" href="/assets/js/12.5b5fc3bc.js"><link rel="prefetch" href="/assets/js/13.1a723e92.js"><link rel="prefetch" href="/assets/js/14.1eb4f7b3.js"><link rel="prefetch" href="/assets/js/15.d69158e9.js"><link rel="prefetch" href="/assets/js/16.6eec511a.js"><link rel="prefetch" href="/assets/js/17.c76a21c6.js"><link rel="prefetch" href="/assets/js/18.22187e53.js"><link rel="prefetch" href="/assets/js/19.cd7087b3.js"><link rel="prefetch" href="/assets/js/20.e3af52e2.js"><link rel="prefetch" href="/assets/js/21.2dfb2a97.js"><link rel="prefetch" href="/assets/js/22.fc88ff85.js"><link rel="prefetch" href="/assets/js/23.6c53c466.js"><link rel="prefetch" href="/assets/js/24.0a9a5c1a.js"><link rel="prefetch" href="/assets/js/25.75c36f8b.js"><link rel="prefetch" href="/assets/js/26.a87d4ec4.js"><link rel="prefetch" href="/assets/js/27.d09b87df.js"><link rel="prefetch" href="/assets/js/28.96ea221d.js"><link rel="prefetch" href="/assets/js/29.53ad3bdc.js"><link rel="prefetch" href="/assets/js/3.1bd1ec9c.js"><link rel="prefetch" href="/assets/js/30.c610705e.js"><link rel="prefetch" href="/assets/js/31.9e5b6883.js"><link rel="prefetch" href="/assets/js/32.9508751b.js"><link rel="prefetch" href="/assets/js/33.4bb48fd7.js"><link rel="prefetch" href="/assets/js/34.0c902ccb.js"><link rel="prefetch" href="/assets/js/35.a9491df0.js"><link rel="prefetch" href="/assets/js/36.dd49cf66.js"><link rel="prefetch" href="/assets/js/37.6fd9ada8.js"><link rel="prefetch" href="/assets/js/38.81ccfe44.js"><link rel="prefetch" href="/assets/js/39.4b26ce80.js"><link rel="prefetch" href="/assets/js/4.ac47e96f.js"><link rel="prefetch" href="/assets/js/40.c2c54f90.js"><link rel="prefetch" href="/assets/js/41.d1f33fd4.js"><link rel="prefetch" href="/assets/js/42.a6eaa761.js"><link rel="prefetch" href="/assets/js/43.de7b020e.js"><link rel="prefetch" href="/assets/js/44.ea3b5f4c.js"><link rel="prefetch" href="/assets/js/45.9bd80565.js"><link rel="prefetch" href="/assets/js/46.68c9c78c.js"><link rel="prefetch" href="/assets/js/47.977948ec.js"><link rel="prefetch" href="/assets/js/48.991512ba.js"><link rel="prefetch" href="/assets/js/49.069a351c.js"><link rel="prefetch" href="/assets/js/5.4655c11a.js"><link rel="prefetch" href="/assets/js/50.d00d5f28.js"><link rel="prefetch" href="/assets/js/51.3151b5bb.js"><link rel="prefetch" href="/assets/js/52.866911b7.js"><link rel="prefetch" href="/assets/js/53.b6f60fa8.js"><link rel="prefetch" href="/assets/js/54.a89d781d.js"><link rel="prefetch" href="/assets/js/55.b312e1a9.js"><link rel="prefetch" href="/assets/js/56.ba600556.js"><link rel="prefetch" href="/assets/js/57.20109eff.js"><link rel="prefetch" href="/assets/js/58.48cc2935.js"><link rel="prefetch" href="/assets/js/59.9ba501e0.js"><link rel="prefetch" href="/assets/js/60.f922157e.js"><link rel="prefetch" href="/assets/js/61.00550a8d.js"><link rel="prefetch" href="/assets/js/62.14f967dd.js"><link rel="prefetch" href="/assets/js/63.0e00a96e.js"><link rel="prefetch" href="/assets/js/64.a24776a9.js"><link rel="prefetch" href="/assets/js/7.a66855d0.js"><link rel="prefetch" href="/assets/js/8.b20260b7.js"><link rel="prefetch" href="/assets/js/9.04c019be.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cc11d504.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Liang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vuepress
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/插件小技巧/" class="nav-link">
+  插件小技巧
+</a></li><li class="dropdown-item"><!----> <a href="/前端基础/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/js相关知识/" class="nav-link">
+  js相关知识
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  vue问题
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  react问题
+</a></li><li class="dropdown-item"><!----> <a href="/优化问题/" class="nav-link">
+  优化问题
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/regular&amp;git/regular/" class="nav-link">
+  正则&amp;git
+</a></li></ul></div></div><div class="nav-item"><a href="/算法题库/" class="nav-link">
+  算法题库
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/progress/" class="nav-link">
+  记录问题
+</a></li><li class="dropdown-item"><!----> <a href="/小案例/" class="nav-link">
+  小案例
+</a></li><li class="dropdown-item"><!----> <a href="/模块联邦/" class="nav-link">
+  模块联邦
+</a></li></ul></div></div><div class="nav-item"><a href="https://gitee.com/Lchu3/lchushan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vuepress
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/插件小技巧/" class="nav-link">
+  插件小技巧
+</a></li><li class="dropdown-item"><!----> <a href="/前端基础/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/js相关知识/" class="nav-link">
+  js相关知识
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  vue问题
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  react问题
+</a></li><li class="dropdown-item"><!----> <a href="/优化问题/" class="nav-link">
+  优化问题
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/regular&amp;git/regular/" class="nav-link">
+  正则&amp;git
+</a></li></ul></div></div><div class="nav-item"><a href="/算法题库/" class="nav-link">
+  算法题库
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/progress/" class="nav-link">
+  记录问题
+</a></li><li class="dropdown-item"><!----> <a href="/小案例/" class="nav-link">
+  小案例
+</a></li><li class="dropdown-item"><!----> <a href="/模块联邦/" class="nav-link">
+  模块联邦
+</a></li></ul></div></div><div class="nav-item"><a href="https://gitee.com/Lchu3/lchushan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>js相关知识</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" aria-current="page" class="sidebar-link">js相关知识</a></li><li><a href="/js相关知识/前端请求接口的几种方式总结.html" class="sidebar-link">前端请求接口的几种方式总结</a></li><li><a href="/js相关知识/ArrObjStr.html" class="sidebar-link">数组/对象/字符串</a></li><li><a href="/js相关知识/递归.html" class="active sidebar-link">递归</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js相关知识/递归.html#递归" class="sidebar-link">递归</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js相关知识/递归.html#递归事件" class="sidebar-link">递归事件</a></li><li class="sidebar-sub-header"><a href="/js相关知识/递归.html#递归组件" class="sidebar-link">递归组件</a></li></ul></li><li class="sidebar-sub-header"><a href="/js相关知识/递归.html#" class="sidebar-link"></a></li></ul></li><li><a href="/js相关知识/跳转相关.html" class="sidebar-link">跳转相关</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="递归"><a href="#递归" class="header-anchor">#</a> 递归</h2> <h3 id="递归事件"><a href="#递归事件" class="header-anchor">#</a> 递归事件</h3> <p>调用事件</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 对象递归事件</span>
+<span class="token function">findIdByName</span><span class="token punctuation">(</span><span class="token parameter">tree</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">var</span> clssData <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>obj <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>obj<span class="token punctuation">.</span>classId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                name<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+                clssData<span class="token punctuation">[</span>obj<span class="token punctuation">.</span>classId<span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">.</span>instId <span class="token operator">||</span> obj<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token function">find</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>parentId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">find</span><span class="token punctuation">(</span>tree<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> clssData<span class="token punctuation">,</span> name <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h3 id="递归组件"><a href="#递归组件" class="header-anchor">#</a> 递归组件</h3> <ol><li><p>test.vue 创建数据架构</p> <div class="language-js extra-class"><pre class="language-js"><code> <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      commentList<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          content<span class="token operator">:</span> <span class="token string">&quot;楼主说的有道理&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          content<span class="token operator">:</span> <span class="token string">&quot;挽尊&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          content<span class="token operator">:</span> <span class="token string">&quot;从前有座山&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          content<span class="token operator">:</span> <span class="token string">&quot;+10086&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 如果是回复别人, 就会把被回复的评论放在 parent 里面</span>
+        <span class="token punctuation">{</span>
+          content<span class="token operator">:</span> <span class="token string">&quot;山上有座庙&quot;</span><span class="token punctuation">,</span>
+          parent<span class="token operator">:</span> <span class="token punctuation">{</span>
+            content<span class="token operator">:</span> <span class="token string">&quot;从前有座山&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          content<span class="token operator">:</span> <span class="token string">&quot;葬爱家族万岁&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          content<span class="token operator">:</span> <span class="token string">&quot;庙里有个和尚在讲故事&quot;</span><span class="token punctuation">,</span>
+          parent<span class="token operator">:</span> <span class="token punctuation">{</span>
+            content<span class="token operator">:</span> <span class="token string">&quot;山上有座庙&quot;</span><span class="token punctuation">,</span>
+            parent<span class="token operator">:</span> <span class="token punctuation">{</span>
+              content<span class="token operator">:</span> <span class="token string">&quot;从前有座山&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>创建mainComment.vue评论组件</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    {{commentData.content}}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  props<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;commentData&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>less<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #e4e4e4<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #eee<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li> <li><p>在test.vue页面引入组件并进行遍历数据渲染</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MainComment</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>(comment, index) in commentList<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>index<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:commentData</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>comment<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> MainComment <span class="token keyword">from</span> <span class="token string">&quot;@/components/test/MainComment&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    MainComment
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token operator">...</span><span class="token punctuation">.</span><span class="token comment">//数据代码省略</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>这样已经实现最新的第一层评论</p> <p><img src="/assets/img/js-1.f1dbe014.png" alt="js-1"></p></li> <li><p>创建parent.vue组件，渲染第一层回复的父评论数据</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    {{parentData.content}}
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+ 
+  props<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;parentData&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>mainComment.vue主评论组件进行传递数据：</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    {{commentData.content}}
+//如果当前一级评论里面有parent数据，就渲染parent结构，并把数据传递过去
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parentCommit</span> <span class="token attr-name">:parentData</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>commentData.parent<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>commentData.parent<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token comment">//引入parent组件</span>
+<span class="token keyword">import</span> parentCommit <span class="token keyword">from</span> <span class="token string">&quot;@/components/test/parentComment.vue&quot;</span><span class="token punctuation">;</span>
+ 
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  props<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;commentData&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    parentCommit
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>less<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #e4e4e4<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #eee<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>这样已经实现回复的第二层评论：</p> <p><img src="/assets/img/js-2.e0eec194.png" alt="js-2"></p></li> <li><p>递归开始：生成未知层数的评论，parent 组件内部递归</p> <ol><li><p>递归组件语法, 必须起一个 name 然后就能在自己的 template 当中调用自己</p></li> <li><p>自己调用自己的数据传递模式是一样的 也是 props</p></li> <li><p>v-if=&quot;parentData.parent&quot; 就是递归终止处理或计算的出口</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    {{parentData.content}}
+ 
+//组件自己调用自己，有parent就调用渲染并传递数据，没有就不渲染
+ 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>parentData.parent<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:parentData</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>parentData.parent<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{parentData.conent}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+<span class="token comment">//递归组件语法，name</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;parent&quot;</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;parentData&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>递归评论已经实现：</p> <p><img src="/assets/img/js-3.79ea60fc.png" alt="js-3"></p></li></ol></li></ol> <h2 id=""><a href="#" class="header-anchor">#</a></h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js相关知识/ArrObjStr.html" class="prev">
+        数组/对象/字符串
+      </a></span> <span class="next"><a href="/js相关知识/跳转相关.html">
+        跳转相关
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2bb61a5f.js" defer></script><script src="/assets/js/2.aecd8e03.js" defer></script><script src="/assets/js/6.3755e0c7.js" defer></script>
+  </body>
+</html>
