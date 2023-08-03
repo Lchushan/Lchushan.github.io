@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>正则 | Liang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.64852305.css" as="style"><link rel="preload" href="/assets/js/app.8914b41c.js" as="script"><link rel="preload" href="/assets/js/3.7f8ab6bd.js" as="script"><link rel="preload" href="/assets/js/55.bec15e04.js" as="script"><link rel="prefetch" href="/assets/js/10.12b4bf37.js"><link rel="prefetch" href="/assets/js/11.986ec194.js"><link rel="prefetch" href="/assets/js/12.127689ae.js"><link rel="prefetch" href="/assets/js/13.528417d2.js"><link rel="prefetch" href="/assets/js/14.ccd1b44f.js"><link rel="prefetch" href="/assets/js/15.df2ae387.js"><link rel="prefetch" href="/assets/js/16.7bbe874c.js"><link rel="prefetch" href="/assets/js/17.4b65eca3.js"><link rel="prefetch" href="/assets/js/18.b4f5604c.js"><link rel="prefetch" href="/assets/js/19.ada119ee.js"><link rel="prefetch" href="/assets/js/2.f7dde802.js"><link rel="prefetch" href="/assets/js/20.d063279a.js"><link rel="prefetch" href="/assets/js/21.d15b3ac7.js"><link rel="prefetch" href="/assets/js/22.5185a1a5.js"><link rel="prefetch" href="/assets/js/23.91b5f7c4.js"><link rel="prefetch" href="/assets/js/24.545bc1fb.js"><link rel="prefetch" href="/assets/js/25.ce0688e9.js"><link rel="prefetch" href="/assets/js/26.14f7ddb2.js"><link rel="prefetch" href="/assets/js/27.1d380883.js"><link rel="prefetch" href="/assets/js/28.84fd7342.js"><link rel="prefetch" href="/assets/js/29.977a10c6.js"><link rel="prefetch" href="/assets/js/30.e27d5c6c.js"><link rel="prefetch" href="/assets/js/31.fef44b40.js"><link rel="prefetch" href="/assets/js/32.3cde5ab7.js"><link rel="prefetch" href="/assets/js/33.2fd0f2f0.js"><link rel="prefetch" href="/assets/js/34.6174b407.js"><link rel="prefetch" href="/assets/js/35.3457d0d3.js"><link rel="prefetch" href="/assets/js/36.c672256a.js"><link rel="prefetch" href="/assets/js/37.c5336199.js"><link rel="prefetch" href="/assets/js/38.f878aa15.js"><link rel="prefetch" href="/assets/js/39.7272608e.js"><link rel="prefetch" href="/assets/js/4.591798d0.js"><link rel="prefetch" href="/assets/js/40.1f5087ab.js"><link rel="prefetch" href="/assets/js/41.d8defd1f.js"><link rel="prefetch" href="/assets/js/42.4decf61e.js"><link rel="prefetch" href="/assets/js/43.1f54a9fb.js"><link rel="prefetch" href="/assets/js/44.05628c46.js"><link rel="prefetch" href="/assets/js/45.b64569a4.js"><link rel="prefetch" href="/assets/js/46.3e758616.js"><link rel="prefetch" href="/assets/js/47.754e4534.js"><link rel="prefetch" href="/assets/js/48.d7707287.js"><link rel="prefetch" href="/assets/js/49.c62b8419.js"><link rel="prefetch" href="/assets/js/5.ae5a8b30.js"><link rel="prefetch" href="/assets/js/50.60fbaa68.js"><link rel="prefetch" href="/assets/js/51.812c8fc9.js"><link rel="prefetch" href="/assets/js/52.bae4e31b.js"><link rel="prefetch" href="/assets/js/53.bdcc492b.js"><link rel="prefetch" href="/assets/js/54.c9eece36.js"><link rel="prefetch" href="/assets/js/56.3e4a4b07.js"><link rel="prefetch" href="/assets/js/57.300f3929.js"><link rel="prefetch" href="/assets/js/58.9b3bc2f8.js"><link rel="prefetch" href="/assets/js/59.b4f2f65a.js"><link rel="prefetch" href="/assets/js/6.c6d5d1da.js"><link rel="prefetch" href="/assets/js/60.6da1c705.js"><link rel="prefetch" href="/assets/js/61.0f431e1e.js"><link rel="prefetch" href="/assets/js/62.ca980bdb.js"><link rel="prefetch" href="/assets/js/63.b1d0e0d0.js"><link rel="prefetch" href="/assets/js/64.a5dc88b1.js"><link rel="prefetch" href="/assets/js/65.2134e59f.js"><link rel="prefetch" href="/assets/js/66.2ce26325.js"><link rel="prefetch" href="/assets/js/67.be6c5ba6.js"><link rel="prefetch" href="/assets/js/68.5ee46489.js"><link rel="prefetch" href="/assets/js/69.817ef5b5.js"><link rel="prefetch" href="/assets/js/7.39a2feef.js"><link rel="prefetch" href="/assets/js/70.bd026d5e.js"><link rel="prefetch" href="/assets/js/71.94cd51c9.js"><link rel="prefetch" href="/assets/js/72.2852256c.js"><link rel="prefetch" href="/assets/js/73.ff13867e.js"><link rel="prefetch" href="/assets/js/74.d43a4484.js"><link rel="prefetch" href="/assets/js/75.8a138783.js"><link rel="prefetch" href="/assets/js/76.75869419.js"><link rel="prefetch" href="/assets/js/77.85ccf9b3.js"><link rel="prefetch" href="/assets/js/78.d1f93c97.js"><link rel="prefetch" href="/assets/js/79.476c7345.js"><link rel="prefetch" href="/assets/js/8.6aa44381.js"><link rel="prefetch" href="/assets/js/80.75df788e.js"><link rel="prefetch" href="/assets/js/81.8dabfdfb.js"><link rel="prefetch" href="/assets/js/82.b373d124.js"><link rel="prefetch" href="/assets/js/83.543e5130.js"><link rel="prefetch" href="/assets/js/84.551d04d7.js"><link rel="prefetch" href="/assets/js/85.21a99aad.js"><link rel="prefetch" href="/assets/js/9.ab9a5c08.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.64852305.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Liang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vuepress
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/插件小技巧/" class="nav-link">
+  插件小技巧
+</a></li><li class="dropdown-item"><!----> <a href="/前端问题/" class="nav-link">
+  前端问题
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  vue问题
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  react问题
+</a></li><li class="dropdown-item"><!----> <a href="/优化问题/" class="nav-link">
+  优化问题
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/regular&amp;git/regular/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  正则&amp;git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="画图小软件" class="dropdown-title"><span class="title">画图小软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="画图小软件" class="mobile-dropdown-title"><span class="title">画图小软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/three.js/" class="nav-link">
+  three.js
+</a></li><li class="dropdown-item"><!----> <a href="/eChart/" class="nav-link">
+  eChart
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="微前端" class="dropdown-title"><span class="title">微前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="微前端" class="mobile-dropdown-title"><span class="title">微前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/qiankun/" class="nav-link">
+  qiankun
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/progress/" class="nav-link">
+  记录问题
+</a></li><li class="dropdown-item"><!----> <a href="/小案例/" class="nav-link">
+  小案例
+</a></li></ul></div></div><div class="nav-item"><a href="https://gitee.com/Lchu3/lchushan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vuepress
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/插件小技巧/" class="nav-link">
+  插件小技巧
+</a></li><li class="dropdown-item"><!----> <a href="/前端问题/" class="nav-link">
+  前端问题
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  vue问题
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  react问题
+</a></li><li class="dropdown-item"><!----> <a href="/优化问题/" class="nav-link">
+  优化问题
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/regular&amp;git/regular/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  正则&amp;git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="画图小软件" class="dropdown-title"><span class="title">画图小软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="画图小软件" class="mobile-dropdown-title"><span class="title">画图小软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/three.js/" class="nav-link">
+  three.js
+</a></li><li class="dropdown-item"><!----> <a href="/eChart/" class="nav-link">
+  eChart
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="微前端" class="dropdown-title"><span class="title">微前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="微前端" class="mobile-dropdown-title"><span class="title">微前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/qiankun/" class="nav-link">
+  qiankun
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/progress/" class="nav-link">
+  记录问题
+</a></li><li class="dropdown-item"><!----> <a href="/小案例/" class="nav-link">
+  小案例
+</a></li></ul></div></div><div class="nav-item"><a href="https://gitee.com/Lchu3/lchushan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>正则&amp;git</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/regular&amp;git/regular/" aria-current="page" class="active sidebar-link">正则表达式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/regular&amp;git/regular/#数字格式验证" class="sidebar-link">数字格式验证</a></li><li class="sidebar-sub-header"><a href="/regular&amp;git/regular/#自然数验证" class="sidebar-link">自然数验证</a></li></ul></li><li><a href="/regular&amp;git/regular/commonUse.html" class="sidebar-link">常用正则表达式</a></li><li><a href="/regular&amp;git/regular/case.html" class="sidebar-link">使用正则案例</a></li><li><a href="/regular&amp;git/git/" class="sidebar-link">git 命令</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="正则"><a href="#正则" class="header-anchor">#</a> 正则</h1> <p>例子</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> reg <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^[A-Za-z\u4e00-\u9fa5]+$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>reg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><a href="https://www.cnblogs.com/duke-cui/p/11099128.html" target="_blank" rel="noopener noreferrer">常用数字正则表达式<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="数字格式验证"><a href="#数字格式验证" class="header-anchor">#</a> 数字格式验证</h2> <p>1、验证数字</p> <div class="language- extra-class"><pre class="language-text"><code>/^[0-9]*$/
+/^\d+$/
+</code></pre></div><p>2、只能输入n个数字</p> <div class="language- extra-class"><pre class="language-text"><code>/^\d{n}$/
+</code></pre></div><p>3、至少输入n个以上的数字</p> <div class="language- extra-class"><pre class="language-text"><code>/^\d{n,}$/
+</code></pre></div><p>4、只能输入m到n个数字</p> <div class="language- extra-class"><pre class="language-text"><code>/^\d{m,n}$/
+</code></pre></div><h2 id="自然数验证"><a href="#自然数验证" class="header-anchor">#</a> 自然数验证</h2> <p>1、数字（含零、正负实数）</p> <div class="language- extra-class"><pre class="language-text"><code>/^[+-]?(0|([1-9]\d*))(\.\d+)?$/
+</code></pre></div><p>2、整数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(0|[1-9][0-9]*|-[1-9][0-9]*)$/
+</code></pre></div><p>3、整数，不含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^((-)?[1-9]\d*)$/
+/^([1-9][0-9]*|-[1-9][0-9]*)$/
+</code></pre></div><p>4、正整数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(0|[1-9][0-9]*)$/
+/^([1-9]\d*|[0]{1,1})$/
+</code></pre></div><p>5、正整数，不含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^([1-9][0-9]*)$/
+/^[1-9]+\d*$/
+/^\+?[1-9][0-9]*$/
+</code></pre></div><p>6、负整数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(0|-[1-9][0-9]*)$/
+</code></pre></div><p>7、负整数，不含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(-[1-9][0-9]*)$/
+</code></pre></div><p>8、正实数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(?:[1-9]\d*|0)(?:\.\d+)?$/
+</code></pre></div><p>9、正实数，不含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(?:[1-9][0-9]*\.[0-9]+|0\.(?!0+$)[0-9]+|[1-9]+\d*)$/
+</code></pre></div><p>10、负实数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(0|-([1-9]+\d*|[1-9][0-9]*\.[0-9]+|0\.(?!0+$)[0-9]+))$/
+</code></pre></div><p>11、负实数，不含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^-([1-9]+\d*|[1-9][0-9]*\.[0-9]+|0\.(?!0+$)[0-9]+)$/
+</code></pre></div><p>12、浮点数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(0|[+-]?((0|([1-9]\d*))\.\d+)?)$/
+</code></pre></div><p>13、浮点数，不含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^[+-]?((0|([1-9]\d*))\.\d+)?$/
+</code></pre></div><p>14、正浮点数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(?:[1-9][0-9]*\.[0-9]+|0\.(?!0+$)[0-9]+|0)$/
+</code></pre></div><p>15、正浮点数，不含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(?:[1-9][0-9]*\.[0-9]+|0\.(?!0+$)[0-9]+)$/
+</code></pre></div><p>16、正浮点数，保留n位小数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(0|(0|[1-9][0-9]*)+(\.\d{n}))$/
+</code></pre></div><p>17、正浮点数，保留m~n个位小数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(0|[1-9][0-9]*)+(\.\d{m,n})?$/
+</code></pre></div><p>18、负浮点数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(0|-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))$/
+</code></pre></div><p>19、负浮点数，不含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^-([1-9]\d*\.\d*|0\.\d*[1-9]\d*)$/
+</code></pre></div><p>20、负浮点数，保留n位小数，含0</p> <div class="language- extra-class"><pre class="language-text"><code>/^(0|-(0|[1-9][0-9]*)+(\.\d{n}))$/
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/regular&amp;git/regular/commonUse.html">
+        常用正则表达式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8914b41c.js" defer></script><script src="/assets/js/3.7f8ab6bd.js" defer></script><script src="/assets/js/55.bec15e04.js" defer></script>
+  </body>
+</html>
